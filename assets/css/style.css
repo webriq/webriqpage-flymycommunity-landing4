@@ -1,7 +1,7 @@
 #main-slider {
   position:relative;
   width:100%;
-  padding:150px 0;
+  padding: 80px 0 150px;
   min-height:570px;
 }
 
@@ -9,9 +9,13 @@
   padding:0px 0px;
 }
 
+#slider-content .container{
+  padding-right: 500px;
+}
+
 #slider-content span {
   display:block;
-  font-size: 28px;
+  font-size: 22px;
   color:#fff;
   font-weight: 200;
 }
@@ -19,8 +23,9 @@
 #slider-content h1 {
   padding:0px 0px;
   display:block;
-  font-size: 70px;
+  font-size: 68px;
   color:#fff;
+  font-weight: 600;
 }
 
 #btnslidebtns {
@@ -96,7 +101,7 @@
 
 #menu {
   color:#fff;
-  padding:15px;
+  padding:10px 0;
 }
 
 #menu .mail {
@@ -130,7 +135,6 @@
 
 #menu .conts a:hover{
   text-decoration: none;
-  color: #88b6fb;
 }
 
 #menu .mail svg {
@@ -229,13 +233,18 @@
 #copyright {
   padding:30px 0px;
   background:#000;
-  color:#fff;
+  color: #646464;
   font-size:14px;
-  font-weight:100;
+  font-weight: 200;
 }
 
 #copyright a {
-  color:#88b6fb;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+#copyright a:hover {
+  text-decoration: none;
 }
 
 #menu .mail, #menu .conts, .menusec .logo img, .menusec {
@@ -247,7 +256,7 @@
   position:fixed;
   width:100%;
   background:#333;
-  z-index:1;
+  z-index:99;
   -webkit-transition:600ms all ease-in-out;
   transition:600ms all ease-in-out;
 }
@@ -272,7 +281,7 @@
 
 #headers {
   position:relative;
-  background: rgba(0, 0, 0, 0.25) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
+  background: rgba(0, 0, 0, .25) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;
 }
 
 #headers:after {
@@ -304,6 +313,7 @@
             transform: translateY(-5px);
   }
 }
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);
@@ -318,6 +328,7 @@
             transform: translateY(-5px);
   }
 }
+
 .down-button {
   border-radius: 50%;
   margin-left: auto;
@@ -347,7 +358,6 @@
 svg {
   width: 3em;
 }
-
 
 @media(max-width:1024px) {
   .addthis_inline_share_toolbox_7weq .at-share-btn-elements:before {
