@@ -2,19 +2,23 @@
   "images": [
     {
       "thumbnail": "/img/image-1-thumb.jpg",
-      "image": "/img/image-1.jpg"
+      "image": "/img/image-1.jpg",
+      "caption": "This is image caption for image 1"
     },
     {
       "thumbnail": "/img/image-2-thumb.jpg",
-      "image": "/img/image-2.jpg"
+      "image": "/img/image-2.jpg",
+      "caption": "This is image caption for image 2"
     },
     {
       "thumbnail": "/img/image-3-thumb.jpg",
-      "image": "/img/image-3.jpg"
+      "image": "/img/image-3.jpg",
+      "caption": "This is image caption for image 3"
     },
     {
       "thumbnail": "/img/image-4-thumb.jpg",
-      "image": "/img/image-4.jpg"
+      "image": "/img/image-4.jpg",
+      "caption": "This is image caption for image 4"
     }
   ]
 }

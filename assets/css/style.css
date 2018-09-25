@@ -4,7 +4,9 @@
   padding: 80px 0 150px;
   min-height:570px;
 }
-
+#gallery h2 {
+  color: #f7f7f7
+}
 #slider-content {
   padding:0px 0px;
 }
@@ -207,7 +209,7 @@
 /*Gallery*/
 
 #gallery{
-  background: #111;
+  background: #111 url('/img/fly3_bg.jpg')
 }
 
 #gallery .swiper-container {
