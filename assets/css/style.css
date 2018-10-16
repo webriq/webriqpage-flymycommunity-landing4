@@ -423,6 +423,19 @@
   background-size: 50px;
 }
 
+.inline {
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+/*.bio-image img {
+  width: 400px;
+}
+*/
+.lity-content {
+  width: 500px;
+}
+
 @-webkit-keyframes bounce {
 
   0%,
