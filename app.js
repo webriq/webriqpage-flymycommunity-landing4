@@ -16,10 +16,8 @@ function getVideoThumbnail() {
       let obj = JSON.parse(data);
       let videoId = obj.content[0].videoid;
       const url = "" + videoId + ".json";
-
       request.get(
-        "https://api.vimeo.com/videos/" + videoId,
-        {
+        "https://api.vimeo.com/videos/" + videoId, {
           auth: {
             bearer: "525b876a547a549ea9db0c236918d29b"
           }
@@ -29,7 +27,6 @@ function getVideoThumbnail() {
             reject(e);
             return;
           }
-
           let obj = JSON.parse(body);
           let images = JSON.stringify(obj.pictures);
           let items = JSON.parse(images);
@@ -39,7 +36,6 @@ function getVideoThumbnail() {
                 title: "vimeo",
                 url: items.sizes[i].link
               };
-
               resolve(obj);
               return;
             }
@@ -49,14 +45,13 @@ function getVideoThumbnail() {
     });
   });
 }
-
 const records = new Records({
   addDataTo: locals,
   site: { file: "data/site.json" },
   gallery: { file: "data/gallery.json" },
-  video: { callback: getVideoThumbnail }  
+  biography: { file: "data/biography.json" },
+  video: { callback: getVideoThumbnail }
 });
-
 module.exports = {
   devtool: 'source-map',
   ignore: ['**/layout.html', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
