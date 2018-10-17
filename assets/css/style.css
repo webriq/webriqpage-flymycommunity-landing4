@@ -359,6 +359,15 @@
 }
 
 
+.inline .details a {
+  color: #89b9ff;
+}
+
+.inline .details a:hover {
+  text-decoration: none;
+  color: #478ff9;
+}
+
 .btn-white {
   background: #fff;
   border: 2px solid #fff;
