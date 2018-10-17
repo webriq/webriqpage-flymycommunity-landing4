@@ -110,21 +110,22 @@
                   </div>
                     <div class="details text-center text-light py-3">
                       <h4>{{bio.title}}</h4>
-                      <p class="py-2">{{bio.shortdesc}}</p>
-                      <a class=" btn btn-primary btn-white modal-inline" href="#inline" role="button" data-lity>
+                      <p class="pt-2 pb-4">{{bio.shortdesc}}</p>
+                      <a class=" btn btn-primary btn-white modal-inline" href="#inline-bio{{bio.num}}" role="button" data-lity>
                       <span class="info-sign"></span>Know More</a>
                     </div>
                   </div>
                 </div>
-                <div id="inline" style="background:#fff" class="inline lity-hide">
+                <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
                   <div class="bio-image text-center">
                     <img src="{{bio.image}}" class="img-fluid" alt="biography">
                   </div>
-                    <div class="details pt-5">
+                    <div class="details pt-5 px-2">
                       <h4>{{bio.title}}</h4>
                       <p class="pt-2">{{bio.description}}</p>
                     </div>
                   </div>
+
             </each>
 
           </div>
