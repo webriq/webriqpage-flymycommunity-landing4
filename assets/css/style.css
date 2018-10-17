@@ -363,44 +363,21 @@
   background: #fff;
   border: 2px solid #fff;
   color: #000;
-<<<<<<< HEAD
   padding: 15px 25px;
   border-radius: 0px;
   text-transform: uppercase;
 }
 
+
 .btn-white:hover {
   outline: 0 !important;
   background: transparent !important;
   border: 2px solid #fff !important;
   color: #fff !important;
-}
-
-
-.btn-white:active,
-.btn-white:focus {
-=======
-  padding: 15px 30px;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 400;
-  border-radius: 0px;
-}
-
-
-.btn-white:hover {
->>>>>>> 7295e4c2b9c8d643236525649d64f8b3386c78e8
-  outline: 0 !important;
-  background: transparent !important;
-  border: 2px solid #fff !important;
-  color: #fff !important;
-<<<<<<< HEAD
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
 }
 
-=======
-}
 
 
 .btn-white:active,
@@ -413,7 +390,6 @@
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
 }
 
->>>>>>> 7295e4c2b9c8d643236525649d64f8b3386c78e8
 #bioraphy .swiper-pagination-bullet {
   width: 13px;
   height: 13px;
@@ -449,15 +425,10 @@
 }
 
 .inline {
-<<<<<<< HEAD
   width: 550px;
-=======
->>>>>>> 7295e4c2b9c8d643236525649d64f8b3386c78e8
   padding: 20px;
   overflow-y: scroll;
 }
-
-<<<<<<< HEAD
 
 .bioraphy-row .btn {
   position: relative;
@@ -479,14 +450,7 @@
 
 .bioraphy-row .btn:hover .info-sign {
   background-image: url(/img/information-white.svg);
-=======
-/*.bio-image img {
-  width: 400px;
-}
-*/
-.lity-content {
-  width: 500px;
->>>>>>> 7295e4c2b9c8d643236525649d64f8b3386c78e8
+
 }
 
 @-webkit-keyframes bounce {
@@ -659,7 +623,6 @@ svg {
 
   .mail a {
     font-size: 0px !important;
-<<<<<<< HEAD
   }
 
   .mail a svg {
@@ -671,25 +634,6 @@ svg {
     display: block;
     padding: 10px;
     z-index: 0
-  }
-
-=======
-  }
-
-  .mail a svg {
-    float: none !important;
-    border: solid 1px;
-    border-radius: 30px;
-    min-width: 50px !important;
-    min-height: 50px !important;
-    display: block;
-    padding: 10px;
-    z-index: 0
-  }
-
->>>>>>> 7295e4c2b9c8d643236525649d64f8b3386c78e8
-  #menu .conts {
-    padding-top: 15px;
   }
 
   #menu .conts a {
@@ -787,9 +731,6 @@ svg {
   .logo.pt-4 {
     padding-top: 0px !important;
   }
-
-  .mail,
-  .conts {}
 
   body .logo img {
     width: 180px !important;
