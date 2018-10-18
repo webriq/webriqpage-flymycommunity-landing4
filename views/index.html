@@ -107,15 +107,16 @@
               <div class="card-body">
                 <h3 class="card-title">{{bio.fullname}}</h3>
                 <div class="stars mb-2">
-                  <i class="{{bio.rate1}}"></i>
-                  <i class="{{bio.rate2}}"></i>
-                  <i class="{{bio.rate3}}"></i>
-                  <i class="{{bio.rate4}}"></i>
-                  <i class="{{bio.rate5}}"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
 
-                <p class="card-text"><a href="tel:{{bio.phoneNumber}}"  class="phone">{{bio.phoneNumber}}</a> {{bio.position}}</p>
-                <a href="mailto:{{bio.email}}" class="email">{{bio.email}}</a>
+                <p class="card-text"><a href="tel:{{bio.phoneNumber}}"  class="phone"><i class="fas fa-mobile-alt"></i>{{bio.phoneNumber}}</a></p>
+                <p class="card-text"><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
+                <p class="card-text">{{bio.position}}</p>
                 <p class="card-text">{{bio.specialties}}</p>
                 <p class="card-text">{{bio.license}}</p>
                 <p class="card-text pt-4 pb-3">{{bio.shortdesc}}</p>
@@ -139,10 +140,11 @@
                   <i class="fas fa-star"></i>
                 </div>
 
-                <p><a class="tel:{{bio.phoneNumber}}">{{bio.phoneNumber}}</a> {{bio.position}}</p>
-                <a href="mailto:{{bio.email}}" class="email">{{bio.email}}</a>
-                <a href="/" class="website">www.{{bio.website}}</a>
-                <p class="card-text">{{bio.specialties}}</p>
+                <p><a href="tel:{{bio.phoneNumber}}"><i class="fas fa-mobile-alt"></i>{{bio.phoneNumber}}</a></p>
+                <p><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
+                <p><a href="/" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
+                <p> {{bio.position}}</p>
+                <p>{{bio.specialties}}</p>
                 <p>{{bio.license}}</p>
                 <p>420 S 19th StColorado Springs, Colorado</p>
 
