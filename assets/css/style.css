@@ -599,6 +599,7 @@ h2 {
   padding: 10px 30px;
   text-align: center;
   background: #4370b6;
+  border-radius: 0px;
 }
 
 .btn-blue:hover {
