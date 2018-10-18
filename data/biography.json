@@ -12,6 +12,11 @@
     "phoneNumber": "415-555-1234",
     "position": "Agent with ABC Real Estate",
     "email": "margaret@gmail.com",
+    "rate1": "fas fa-star",
+    "rate2": "fas fa-star",
+    "rate3": "fas fa-star",
+    "rate4": "fas fa-star",
+    "rate5": "fas fa-star",
     "website": "margaretevans.com"
   }]
 }

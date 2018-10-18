@@ -107,12 +107,11 @@
               <div class="card-body">
                 <h3 class="card-title">{{bio.fullname}}</h3>
                 <div class="stars mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-
+                  <i class="{{bio.rate1}}"></i>
+                  <i class="{{bio.rate2}}"></i>
+                  <i class="{{bio.rate3}}"></i>
+                  <i class="{{bio.rate4}}"></i>
+                  <i class="{{bio.rate5}}"></i>
                 </div>
 
                 <p class="card-text"><a href="tel:{{bio.phoneNumber}}"  class="phone">{{bio.phoneNumber}}</a> {{bio.position}}</p>
@@ -125,20 +124,6 @@
               </div>
             </div>
 
-            <!-- <div class="card flex-row flex-wrap" style="width: 18rem;">
-  <div class="card-header border-0">
-    <img src="{{bio.image}}" class="card-img-top img-fluid" alt="biography" style="width:200px;">
-            </div>
-    <div class="card-body px-2">
-      <h4 class="card-title">{{bio.name}}</h4>
-      <p class="card-text">{{bio.shortdesc}}</p>
-      <a class=" btn btn-primary btn-white modal-inline" href="#inline-bio{{bio.num}}" role="button" data-lity>
-                      <span class="info-sign"></span>Know More</a>
-    </div>
-    <div class="w-100"></div>
-
-  </div>
- -->
             <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
               <!-- <div class="bio-image text-center">
   <img src="{{bio.image}}" class="img-fluid" alt="biography">
