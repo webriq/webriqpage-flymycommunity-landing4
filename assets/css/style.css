@@ -319,6 +319,11 @@
   padding: 100px 0px 150px;
 }
 
+.card-header {
+  background: #fff;
+}
+
+
 #bioraphy p {
   font-weight: 200;
 }
@@ -330,6 +335,15 @@
   height: 100%;
   position: absolute;
   top: 0;
+}
+
+#biography a {
+  color: #fff;
+  display: block;
+  border: solid 1px rgba(221, 221, 221, .34902);
+  width: 250px;
+  padding: 15px 30px;
+  text-align: center;
 }
 
 .user-img {
@@ -434,8 +448,10 @@
 }
 
 .inline {
-  width: 550px;
+  max-width: 600px;
+  width: 100%;
   padding: 20px;
+  border-radius: 3px;
   overflow-y: scroll;
 }
 
@@ -460,6 +476,87 @@
 .bioraphy-row .btn:hover .info-sign {
   background-image: url(/img/information-white.svg);
 
+}
+
+
+#bioraphy .card {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#bioraphy card-header {
+  float: left;
+}
+
+#bioraphy .card-body {
+  float: left;
+  width: 300px;
+}
+
+
+.contact-details ul {
+  padding: 0;
+}
+
+.contact-details ul li {
+  list-style: none;
+}
+
+.contact-details p {
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.contact-details li {
+  display: inline;
+  border-right: 2px solid #e8e8e8;
+  margin-right: 15px;
+  padding-right: 10px;
+}
+
+.contact-details li:last-child {
+  border-right: 0px solid #9bc4ff;
+}
+
+.address {
+  color: #9e9e9e;
+}
+
+.address i {
+  padding-right: 5px;
+}
+
+.contact-details i {
+  color: #89b9ff;
+}
+
+.btn-blue {
+  color: #fff;
+  border: solid 1px rgba(221, 221, 221, .34902);
+  padding: 10px 30px;
+  text-align: center;
+  background: #4370b6;
+}
+
+.btn-blue:hover {
+  color: #4370b6 !important;
+  padding: 10px 30px;
+  text-align: center;
+  background: transparent !important;
+  border: 1px solid #4370b6 !important;
+}
+
+.btn-blue:active,
+.btn-blue:focus {
+  color: #4370b6 !important;
+  padding: 10px 30px;
+  text-align: center;
+  background: transparent !important;
+  border: 1px solid #4370b6 !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0rem rgba(0, 123, 255, .5) !important;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, .5) !important;
 }
 
 @-webkit-keyframes bounce {
@@ -612,6 +709,12 @@ svg {
   }
 }
 
+@media(max-width:767px) {
+  .card-header img {
+    width: 100% !important;
+  }
+}
+
 @media(max-width:640px) {
   #slider-content {
     text-align: center !important;
@@ -729,6 +832,15 @@ svg {
   body #about .col:nth-child(1) {
     min-width: 100% !important;
   }
+
+
+
+  .contact-details li {
+    border-right: 0px;
+    display: block;
+  }
+
+
 }
 
 @media(max-width:480px) {

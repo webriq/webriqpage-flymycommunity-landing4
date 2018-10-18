@@ -97,54 +97,107 @@
     </section>
     <section id="bioraphy">
       <div class="container">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <each loop='bio of biography.biography'>
-              <div class="swiper-slide">
-                <div class="bioraphy-row">
-                  <div class="profile user-img">
-                    <img src="{{bio.image}}" class="img-fluid" alt="biography">
-                  </div>
-                    <div class="details text-center text-light py-3">
-                      <h4>{{bio.name}}</h4>
-                      <p class="pt-2 pb-4">{{bio.shortdesc}}</p>
-                      <a class=" btn btn-primary btn-white modal-inline" href="#inline-bio{{bio.num}}" role="button" data-lity>
+        <each loop='bio of biography.biography'>
+          <div class="card flex-row flex-wrap">
+
+            <div class="card-header border-0">
+              <img src="{{bio.image}}" class="card-img-top img-fluid" alt="biography" style="width:200px;">
+            </div>
+              <div class="card-body">
+                <h5 class="card-title">{{bio.name}}</h5>
+                <p class="card-text pt-2 pb-3">{{bio.shortdesc}}</p>
+                <a class="btn btn-primary btn-blue" href="#inline-bio{{bio.num}}" role="button" data-lity>Know More</a>
+
+              </div>
+            </div>
+
+            <!-- <div class="card flex-row flex-wrap" style="width: 18rem;">
+  <div class="card-header border-0">
+    <img src="{{bio.image}}" class="card-img-top img-fluid" alt="biography" style="width:200px;">
+            </div>
+    <div class="card-body px-2">
+      <h4 class="card-title">{{bio.name}}</h4>
+      <p class="card-text">{{bio.shortdesc}}</p>
+      <a class=" btn btn-primary btn-white modal-inline" href="#inline-bio{{bio.num}}" role="button" data-lity>
                       <span class="info-sign"></span>Know More</a>
-                    </div>
+    </div>
+    <div class="w-100"></div>
+
+  </div>
+ -->
+            <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
+              <!-- <div class="bio-image text-center">
+  <img src="{{bio.image}}" class="img-fluid" alt="biography">
                   </div>
+ -->
+              <div class="details pt-4 px-2">
+                <h5 class="card-title">{{bio.name}}</h5>
+
+                <p class="pt-2  pb-3">{{bio.description}}</p>
+                <p class="address"><i class="fas fa-map-marker-alt"></i>420 S 19th StColorado Springs, Colorado</p>
+                <div class="contact-details">
+                  <ul>
+                    <li><i class="fas fa-mobile-alt"></i><a href="tel:719-964-0541">719-964-0541</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:719-964-0541">margaret@gmail.com</a></li>
+                    <li><i class="fas fa-globe-americas"></i><a href="#" class="website">{{bio.website}}</a>
+                    </li>
+                  </ul>
+
                 </div>
-                <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
-                  <div class="bio-image text-center">
-                    <img src="{{bio.image}}" class="img-fluid" alt="biography">
-                  </div>
-                    <div class="details pt-5 px-2">
-                      <h4>{{bio.fullname}}</h4>
-                      <a href="#" class="website">{{bio.website}}</a>
-                      <p class="pt-4">{{bio.description}}</p>
 
-                    </div>
-                  </div>
+              </div>
+            </div>
 
-            </each>
-
-          </div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-        </div>
-
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need scrollbar -->
-        <!-- <div class="swiper-scrollbar"></div> -->
+        </each>
       </div>
     </section>
+    <!-- <section id="bioraphy">
+  <div class="container">
+
+    <div class="swiper-container">
+
+      <div class="swiper-wrapper">
+
+        <each loop='bio of biography.biography'>
+          <div class="swiper-slide">
+            <div class="bioraphy-row">
+              <div class="profile user-img">
+                <img src="{{bio.image}}" class="img-fluid" alt="biography">
+                  </div>
+                <div class="details text-center text-light py-3">
+                  <h4>{{bio.name}}</h4>
+                  <p class="pt-2 pb-4">{{bio.shortdesc}}</p>
+                  <a class=" btn btn-primary btn-white modal-inline" href="#inline-bio{{bio.num}}" role="button" data-lity>
+                      <span class="info-sign"></span>Know More</a>
+                </div>
+              </div>
+            </div>
+            <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
+              <div class="bio-image text-center">
+                <img src="{{bio.image}}" class="img-fluid" alt="biography">
+                  </div>
+                <div class="details pt-4 px-2">
+                  <h4>{{bio.fullname}}</h4>
+                  <a href="#" class="website">{{bio.website}}</a>
+                  <p class="pt-4">{{bio.description}}</p>
+
+                </div>
+              </div>
+
+        </each>
+
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+  </div>
+</section>
+ -->
 
     <section id="copyright" class="footercopy">
       <div class="container">
