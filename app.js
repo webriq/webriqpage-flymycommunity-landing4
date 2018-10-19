@@ -3,11 +3,18 @@ const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const Records = require('spike-records')
+const excerpt = require('html-excerpt')
 const env = process.env.SPIKE_ENV
 const https = require('https')
 const fs = require('fs')
-const locals = {}
+const locals = {
+  dataExcerpt: postExcerpt
+}
 let request = require('request')
+
+function postExcerpt(html, length, ellipsis) {
+  return excerpt.text(html, length || 100, ellipsis || '...');
+}
 
 function getVideoThumbnail() {
   return new Promise((resolve, reject) => {
