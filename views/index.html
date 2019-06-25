@@ -4,11 +4,11 @@
       <div id="menu" class="menusec">
         <div class="container">
           <div class="row">
-            <div class="col logo text-left">
+            <div class="col-4 logo text-left d-flex align-items-center">
               <img src="" alt="" class="share-image d-none hvr-bob">
-              <img src="{{ site.sitedata[0].logo }}" alt="{{ site.sitedata[0].logo_name }}" class="hvr-bob">
+              <img src="{{ site.sitedata[0].logo }}" alt="{{ site.sitedata[0].logoname }}" class="hvr-bob logo">
             </div>
-              <div class="col conts text-right">
+              <div class="col-8 conts text-right d-flex align-items-center justify-content-end">
                 <a href='mailto:{{ site.content[0].email }}' class="hvr-float mail">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="20" height="20"><g fill="#9dbfea"><path d="M7 9L5.268 7.484.316 11.729c.18.167.423.271.691.271h11.986c.267 0 .509-.104.688-.271L8.732 7.484 7 9z"/><path d="M13.684 2.271A1.007 1.007 0 0 0 12.993 2H1.007c-.267 0-.509.104-.689.273L7 8l6.684-5.729zM0 2.878v8.308l4.833-4.107zM9.167 7.079L14 11.186V2.875z"/></g></svg>
                   <span>{{ site.content[0].email }}</span>
@@ -30,7 +30,7 @@
               </div>
             </div>
             <div id="slider-content" class="container">
-              <div class="col-md-6 text-left">
+              <div class="col-12 col-md-8 col-lg-6 text-left">
                 <h1 class="video-heading">{{ site.content[0].slidertext1 }} </h1>
                 <span class="video-subheading">{{ site.content[0].slidertext2 }}</span>
               </div>
