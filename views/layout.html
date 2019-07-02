@@ -52,7 +52,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/bs-animation.js"></script>
     <script src="/js/index.js"></script>
-    <script src="https://cdn.rawgit.com/webriq/update_elements/master/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/webriq/update_elements/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ba0adf07fbd3212"></script>
@@ -61,18 +61,43 @@
     <script src="/js/Simple-Slider.js"></script>
     <script src="/js/lity.js"></script>
     <script type="text/javascript">
-    // Bind as an event handlerS
-    $(document).on('click', '#one', lity);
+      // Bind as an event handlerS
+      $(document).on('click', '#one', lity);
 
+      function imageCard(image) {
+        return `
+          <div class="col-md-4">
+            <div class="gallery-list mb-4">
+              <a href="${image.image}" class="lightbox-link" data-lightbox="gallery" data-title="${image.caption}">
+                <img src="${image.thumbnail}" class="img-fluid image">
+              </a>
+              <div class="overlay">
+                <a href="${image.image}" class="lightbox-hover" data-lightbox="gallery">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.966 52.966" width="120" height="120"><g fill="#FFF"><path d="M28.983 20h-6v-6a1 1 0 0 0-2 0v6h-6a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2z"/><path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 0 0 1.414.028 1 1 0 0 0 .028-1.414zM2.983 21c0-10.477 8.523-19 19-19s19 8.523 19 19-8.523 19-19 19-19-8.523-19-19z"/></g></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function appendImagesToGallery(data) {
+        $(".gallery-container").empty();
+        data.images.forEach(image => {
+          $(".gallery-container").append(imageCard(image))
+        });
+      }
+
+      let imageSource = `data/gallery.json`;
+      try {
+        const url = new URL(window.location.href);
+        imageSource = url.searchParams.get('gallery');
+      } catch(err) {
+        console.log("Unable to parse URL via URL method!", err);
+      }
+
+      $.getJSON(imageSource, appendImagesToGallery);
     </script>
-    <!-- <script type="text/javascript">
-$(function() {
-  $('a[href]').on('click', function() {});
-});
-
-</script>
- -->
-
   </block>
 </body>
 

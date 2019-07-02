@@ -1,3 +1,6 @@
+img.logo {
+  max-width: 160px
+}
 h2 {
   font-size: 35px;
 }
@@ -5,7 +8,7 @@ h2 {
 #main-slider {
   position: relative;
   width: 100%;
-  padding: 80px 0 150px;
+  padding: 120px 0 150px;
   min-height: 570px;
 }
 
@@ -112,12 +115,9 @@ h2 {
 }
 
 #menu .mail {
-  padding: 35px 0px 0px;
+  padding: 0px;
 }
 
-#menu .conts {
-  padding: 35px 0px 0px;
-}
 
 #menu .mail p a,
 #menu .mail p {
@@ -282,13 +282,12 @@ h2 {
 }
 
 #menu.fixed .conts {
-  padding: 15px 0px 0px;
+  padding: 0px;
   -webkit-transition: 600ms all ease-in-out;
   transition: 600ms all ease-in-out;
 }
 
 #menu.fixed .mail {
-  padding: 20px 0px 0px;
   -webkit-transition: 600ms all ease-in-out;
   transition: 600ms all ease-in-out;
 }
@@ -773,17 +772,19 @@ svg {
   }
 
   #menu .conts a {
-    padding: 13px 20px 13px 0px;
+    padding: 0px;
     font-size: 14px
   }
 
   #menu .conts a span {
     padding: 13px 2px 13px 10px;
   }
-
+  #menu .conts {
+    padding: 25px 0;
+  }
   #menu .mail svg {
     display: inline-block;
-    float: left;
+    float: none;
     margin-right: 10px;
     width: 20px !important;
     margin-top: -1px
@@ -930,7 +931,7 @@ svg {
   }
 
   #menu.fixed .mail {
-    padding: 10px 0px 0px;
+    padding: 0px;
   }
 
   .menusec.fixed .logo img {
@@ -963,7 +964,7 @@ svg {
 @media(max-width:480px) {
   #menu {
     background: #89b9ff;
-    padding: 0px 15px;
+    padding: 10px 15px;
   }
 
   .logo.pt-4 {
@@ -971,7 +972,7 @@ svg {
   }
 
   body .logo img {
-    width: 180px !important;
+    max-width: 120px !important;
   }
 
   .btnplay a {

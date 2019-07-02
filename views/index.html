@@ -4,14 +4,12 @@
       <div id="menu" class="menusec">
         <div class="container">
           <div class="row">
-            <div class="col logo text-left">
-              <!-- <img src="/img/logofly.png" /> -->
-              <!-- <h2>{{ site.sitedata[0].logoname }}</h2> -->
+            <div class="col-4 logo text-left d-flex align-items-center">
               <img src="" alt="" class="share-image d-none hvr-bob">
-              <img src="{{ site.sitedata[0].logo }}" alt="{{ site.sitedata[0].logo_name }}" class="hvr-bob">
+              <img src="{{ site.sitedata[0].logo }}" alt="{{ site.sitedata[0].logoname }}" class="hvr-bob logo">
             </div>
-              <div class="col conts text-right">
-                <a href='mailto:{{ site.content[0].email }}' class="hvr-float">
+              <div class="col-8 conts text-right d-flex align-items-center justify-content-end">
+                <a href='mailto:{{ site.content[0].email }}' class="hvr-float mail">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="20" height="20"><g fill="#9dbfea"><path d="M7 9L5.268 7.484.316 11.729c.18.167.423.271.691.271h11.986c.267 0 .509-.104.688-.271L8.732 7.484 7 9z"/><path d="M13.684 2.271A1.007 1.007 0 0 0 12.993 2H1.007c-.267 0-.509.104-.689.273L7 8l6.684-5.729zM0 2.878v8.308l4.833-4.107zM9.167 7.079L14 11.186V2.875z"/></g></svg>
                   <span>{{ site.content[0].email }}</span>
                 </a>
@@ -26,14 +24,13 @@
         <div id="mainslider" class="videoslidehere">
 
           <div id="main-slider" class="">
-            <!-- <div style="background-image:url('{{ site.content[0].sliderbg }}');" class="video-background"> -->
             <div class="video-background">
               <div class="video-foreground">
                 <iframe src="https://player.vimeo.com/video/{{ site.content[0].videoid }}?background=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
               </div>
             </div>
             <div id="slider-content" class="container">
-              <div class="col-md-6 text-left">
+              <div class="col-12 col-md-8 col-lg-6 text-left">
                 <h1 class="video-heading">{{ site.content[0].slidertext1 }} </h1>
                 <span class="video-subheading">{{ site.content[0].slidertext2 }}</span>
               </div>
@@ -51,7 +48,6 @@
                     <div class="modais" id="youtube" data-izimodal-transitionin="fadeInDown" data-izimodal-title="Colorado Springs - Aerial Drone Video" data-izimodal-iframeurl="//vimeo.com/{{ site.content[0].videoid }}"></div>
                   </div>
                   <div class="addthis_inline_share_toolbox_7weq"></div>
-                  <!-- <div class="addthis_sharing_toolbox" data-title="{{ site.content[0].slidertext2 }}" data-description="{{ site.about[0].abouttext2 }}" data-media="/img/aboutfly_bg.png"></div>                   -->
                 </div>
               </div>
 
@@ -77,7 +73,7 @@
       </div>
       <div class="container">
         <!-- Swiper -->
-        <div class="row">
+        <div class="row gallery-container">
           <each loop='image of gallery.images'>
             <div class="col-md-4">
               <div class="gallery-list mb-4">
@@ -95,127 +91,6 @@
         </div>
       </div>
     </section>
-    <section id="bioraphy">
-      <div class="container">
-        <h2 class="mt-0 mb-5 text-blue text-center">Agent</h2>
-        <each loop='bio of biography.biography'>
-          <div class="card flex-row flex-wrap">
-
-            <div class="card-header border-0">
-              <img src="{{bio.image}}" class="card-img-top img-fluid" alt="biography" >
-            </div>
-              <div class="card-body">
-                <h3 class="card-title">{{bio.fullname}}</h3>
-                <div class="stars mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <p class="card-text"><a href="tel:{{bio.phoneNumber}}"  class="phone"><i class="fas fa-mobile-alt"></i>{{bio.phoneNumber}}</a></p>
-                <p class="card-text"><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
-                <p class="card-text">{{bio.position}}</p>
-                <p class="card-text">{{bio.specialties}}</p>
-                <p class="card-text">{{bio.license}}</p>
-                <p class="card-text pt-4 pb-3">{{bio.shortdesc}}</p>
-                <a class="btn btn-primary btn-blue" href="#inline-bio{{bio.num}}" role="button" data-lity>Know More</a>
-
-              </div>
-            </div>
-
-            <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
-              <!-- <div class="bio-image text-center">
-  <img src="{{bio.image}}" class="img-fluid" alt="biography">
-                  </div>
- -->
-              <div class="details pt-4 px-2">
-                <h3 class="card-title">{{bio.fullname}}</h3>
-                <div class="stars mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-
-                <p><a href="tel:{{bio.phoneNumber}}"><i class="fas fa-mobile-alt"></i>{{bio.phoneNumber}}</a></p>
-                <p><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
-                <p><a href="/" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
-                <p> {{bio.position}}</p>
-                <p>{{bio.specialties}}</p>
-                <p>{{bio.license}}</p>
-                <p>420 S 19th StColorado Springs, Colorado</p>
-
-                <p class="pt-4  pb-3">{{bio.description}}</p>
-                <!-- <p class="address"><i class="fas fa-map-marker-alt"></i>420 S 19th StColorado Springs, Colorado</p> -->
-
-                <!-- <div class="contact-details">
-  <ul>
-    <li><i class="fas fa-mobile-alt"></i><a href="tel:719-964-0541">719-964-0541</a></li>
-    <li><i class="fas fa-envelope"></i><a href="mailto:719-964-0541">margaret@gmail.com</a></li>
-
-    <li><i class="fas fa-globe-americas"></i><a href="#" class="website">{{bio.website}}</a>
-    </li>
-  </ul>
-
-</div>
- -->
-
-              </div>
-            </div>
-
-        </each>
-      </div>
-    </section>
-    <!-- <section id="bioraphy">
-  <div class="container">
-
-    <div class="swiper-container">
-
-      <div class="swiper-wrapper">
-
-        <each loop='bio of biography.biography'>
-          <div class="swiper-slide">
-            <div class="bioraphy-row">
-              <div class="profile user-img">
-                <img src="{{bio.image}}" class="img-fluid" alt="biography">
-                  </div>
-                <div class="details text-center text-light py-3">
-                  <h4>{{bio.name}}</h4>
-                  <p class="pt-2 pb-4">{{bio.shortdesc}}</p>
-                  <a class=" btn btn-primary btn-white modal-inline" href="#inline-bio{{bio.num}}" role="button" data-lity>
-                      <span class="info-sign"></span>Know More</a>
-                </div>
-              </div>
-            </div>
-            <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
-              <div class="bio-image text-center">
-                <img src="{{bio.image}}" class="img-fluid" alt="biography">
-                  </div>
-                <div class="details pt-4 px-2">
-                  <h4>{{bio.fullname}}</h4>
-                  <a href="#" class="website">{{bio.website}}</a>
-                  <p class="pt-4">{{bio.description}}</p>
-
-                </div>
-              </div>
-
-        </each>
-
-      </div>
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-    </div>
-
-    <div class="swiper-pagination"></div>
-
-  </div>
-</section>
- -->
 
     <section id="copyright" class="footercopy">
       <div class="container">
