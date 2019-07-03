@@ -132,18 +132,25 @@
 
             <div id="inline-bio{{bio.num}}" style="background:#fff" class="inline lity-hide">
               <div class="details pt-4 px-2">
-                <h3 class="card-title">{{bio.fullname}}</h3>
-                <div class="stars mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="mb-2">
-                  <p><span class="text-blue">Position:</span> {{bio.position}}</p>
-                  <p><span class="text-blue">Specialties:</span> {{bio.specialties}}</p>
-                  <p><span class="text-blue">License No.:</span> {{bio.license}}</p>
+                <div class="row">
+                  <div class="col-4">
+                    <img src="{{bio.image}}" class="avatar img-fluid" alt="biography" >
+                  </div>
+                  <div class="col-7">
+                    <h3 class="card-title text-white">{{bio.fullname}}</h3>
+                    <div class="stars mb-2">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="mb-2">
+                      <p><span class="text-blue">Position:</span> {{bio.position}}</p>
+                      <p><span class="text-blue">Specialties:</span> {{bio.specialties}}</p>
+                      <p><span class="text-blue">License No.:</span> {{bio.license}}</p>
+                    </div>
+                  </div>
                 </div>
                 <hr/>
                 <p class="text-blue mb-2">Biography</p>

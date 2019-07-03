@@ -376,6 +376,9 @@ h2 {
 .details a {
   display: block;
 }
+.details .avatar {
+  border-radius: 100%;
+}
 
 #bioraphy p {
   font-weight: 200;
